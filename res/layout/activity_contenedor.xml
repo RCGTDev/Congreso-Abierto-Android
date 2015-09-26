@@ -1,0 +1,42 @@
+<!-- A DrawerLayout is intended to be used as the top-level content view using match_parent for both width and height to consume the full space available. -->
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.redciudadana.congreso_abierto.ContenedorActivity" >
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:orientation="vertical" >
+      
+        <fragment
+        android:id="@+id/FragmentBienvenida"
+        android:name="com.redciudadana.congreso_abierto.Banner1Fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+        
+        <fragment
+        android:id="@+id/FragmentDistritos"
+        android:name="com.redciudadana.congreso_abierto.Banner2Fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+        
+        <fragment
+        android:id="@+id/FragmentRepresentante"
+        android:name="com.redciudadana.congreso_abierto.Banner3Fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+                        
+    </LinearLayout>
+    
+    <fragment
+        android:id="@+id/navigation_drawer"
+        android:name="com.redciudadana.congreso_abierto.NavigationDrawerFragment"
+        android:layout_width="@dimen/navigation_drawer_width"
+        android:layout_height="match_parent"
+        android:layout_gravity="left" />
+
+</android.support.v4.widget.DrawerLayout>
